@@ -44,6 +44,8 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${user} = import ./home/fs/darwin.nix;
+            # Add this line to enable automatic backups
+            home-manager.backupFileExtension = "backup";
           }
         ];
       };
